@@ -36,7 +36,9 @@ import Counters from './components/counters';
    render() { 
      return (
        <React.Fragment>
-         <Navbar />
+         <Navbar 
+         totalCounters={this.state.counters.filter(c => c.value > 0).length}
+         />
          <main>
          <Counters
          counters={this.state.counters}
